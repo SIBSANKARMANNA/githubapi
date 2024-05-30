@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Form Submission</h2>
+
+<form id="myForm">
+  Name: <input type="text" id="name"><br>
+  Email: <input type="text" id="email"><br>
+  <input type="button" onclick="submitForm()" value="Submit">
+</form>
+
+<script>
+function submitForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+
+  var data = {
+    "message": "Form submission",
+    "content": btoa(`Name: ${name}\nEmail: ${email}`) // Encode form data as base64
+  };
+
+  fetch('https://api.github.com/repos/SIBSANKARMANNA/githubapi/contents/', {
+    method: 'PUT',
+    headers: {
+      'Authorization': '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',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
+</script>
+
+</body>
+</html>
