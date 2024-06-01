@@ -19,7 +19,7 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
 
     try {
         const url = `https://api.github.com/repos/${repo}/contents/${fileName}`;
-        const response = await fetch(url, {
+        const response = await fetch(url,{
             method: 'PUT',
             headers: {
                 'Authorization': `token ${token}`,
