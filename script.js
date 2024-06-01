@@ -10,10 +10,10 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
     const responseMessage = document.getElementById('responseMessage');
 
     // Prepare the file and API request
-    const fileName = `content-${date}.txt`;
+    const fileName = `content/submission-${date}.txt`;
     const fileContent = btoa(data); // Base64 encoding the file content
 
-    const repo = 'SIBSANKARMANNA';
+    const repo = 'SIBSANKARMANNA/githubapi';
     const branch = 'main'; // or the branch where you want to commit
     const token = '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'; // GitHub PAT
 
