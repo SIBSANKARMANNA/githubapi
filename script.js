@@ -15,7 +15,7 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
 
     const repo = 'SIBSANKARMANNA/githubapi';
     const branch = 'main'; // or the branch where you want to commit
-    const token = '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'; // GitHub PAT
+    const token = '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'; // GitHub PAT
 
     try {
         const url = `https://api.github.com/repos/${repo}/contents/${fileName}`;
