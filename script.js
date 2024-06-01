@@ -13,7 +13,7 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
     const fileName = `submissions/submission-${date}.txt`;
     const fileContent = btoa(data); // Base64 encoding the file content
 
-    const repo = 'SIBSANKARMANNA/githubapi';
+    const repo = 'sibsankarmanna/githubapi';
     const branch = 'main'; // or the branch where you want to commit
     const token = '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'; // GitHub PAT
 
