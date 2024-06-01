@@ -18,7 +18,7 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
     const token = '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'; // GitHub PAT
 
     try {
-        const url = `https://api.github.com/repos/${repo}/${fileName}/contents`;
+        const url = `https://api.github.com/repos/${repo}/${fileName}`;
         const response = await fetch(url, {
             method: 'PUT',
             headers: {
