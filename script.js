@@ -39,6 +39,8 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
             responseMessage.textContent = `Error: ${responseData.message}`;
         }
 
-    } catch (error) {
+    }  catch (error) {
         console.error('Error submitting form:', error);
-        responseMessage  
+        responseMessage.textContent = 'There was an error submitting the form. Please try again later.';
+    }
+});
