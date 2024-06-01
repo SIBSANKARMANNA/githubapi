@@ -10,7 +10,7 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
     const responseMessage = document.getElementById('responseMessage');
 
     // Prepare the file and API request
-    const fileName = `content/submission-${date}.txt`;
+    const fileName = `submissions/submission-${date}.txt`;
     const fileContent = btoa(data); // Base64 encoding the file content
 
     const repo = 'SIBSANKARMANNA/githubapi';
